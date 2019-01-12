@@ -1,6 +1,6 @@
 //Requires
 var express = require('express');
-
+require('./config/config.js');
 //Inicializar variables
 var app = express();
 const bodyParser = require('body-parser')
@@ -42,6 +42,6 @@ app.post('/alumnos', (req, res) => {
 })
 
 //Escuchar peticiones
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Express server online");
 });
