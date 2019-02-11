@@ -13,17 +13,19 @@ var op = {
 var cors = require('cors')
 //***************cors*****************
 
-//Rutas
-var alumnosRouter = require('./routes/alumnos-routes');
-
-// app.use(require('./routes/historias'))
-
-app.use('/api/alumnos', cors(op), alumnosRouter);
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
   extended: false
 }))
+
+//**************Llamada de archivos en rutas*******************
+var alumnosRouter = require('./routes/alumnos-routes');
+
+
+//**************Ruta principal de archivo***************
+app.use('/api/alumnos', cors(op), alumnosRouter);
+
+
 
 
 // app.get('/', async (req, res) => {
