@@ -27,14 +27,6 @@ app.use('/api/alumnos', cors(op), alumnosRouter);
 
 
 
-
-// app.get('/', async (req, res) => {
-//   let view_alumnos = await pg.func('public.ft_view_get_alumnos').catch(err => {
-//     console.log(err);
-//   })
-//   console.log(view_alumnos);
-// })
-
 app.listen(process.env.PORT, () => {
   console.log("Api Puxbit is up");
 })
