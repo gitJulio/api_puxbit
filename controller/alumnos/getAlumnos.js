@@ -15,5 +15,5 @@ exports.getAlumnos = async function(req, res, next) {
     return
   }
 
-  res.send(alumnos[0]['ft_view_get_alumnos'])
+  res.json(alumnos)
 }
