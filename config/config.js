@@ -1,5 +1,5 @@
 // Puerto
-process.env.PORT = process.env.PORT || 5000;
+process.env.PORT = process.env.PORT || 6000;
 
 const config = {
   db: {
