@@ -21,11 +21,13 @@ app.use(bodyParser.urlencoded({
 //**************Llamada de archivos en rutas*******************
 var alumnosRouter = require('./routes/alumnos-routes');
 var padresRouter = require('./routes/padres-routes');
+var profesoresRouter=require('./routes/profesores-routes');
 
 
 //**************Ruta principal de archivo***************
 app.use('/api/alumnos', cors(op), alumnosRouter);
 app.use('/api/padres', cors(op), padresRouter);
+app.use('/api/profesores', cors(op), profesoresRouter);
 
 
 app.listen(process.env.PORT, () => {
