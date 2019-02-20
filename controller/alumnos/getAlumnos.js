@@ -2,6 +2,7 @@ const pg = require('../../config/ps_conection')
 
 exports.getAlumnos = async function(req, res, next) {
 
+console.log(req.body.user);
 
   let alumnos =
     await pg.func('public.ft_view_get_alumnos').catch(err => {
