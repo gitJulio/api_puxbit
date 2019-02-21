@@ -1,5 +1,5 @@
 const pg =require('../../config/ps_conection')
-
+const jwt=require('jsonwebtoken')
 
 exports.login=async function(req, res, next){
 
@@ -13,9 +13,12 @@ await pg.func('public.ft_view_get_usuario',[body.email,body.password]).catch(err
     })
 })
 
+console.log(usuario[0]);
 if (usuario && usuario !='') {
   res.send({
-    ok:true
+    ok:true,
+    usuario:usuario[0].correo,
+    token:1234
   })
 }else{
   res.status(400).send({
