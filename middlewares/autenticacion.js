@@ -10,7 +10,7 @@ let verificaToken =(req, res, next)=>{
           err
         })
       }
-      req.usuario=decoded.usuario;
+      req.id=decoded.id;
       req.nivel=decoded.nivel;
     })
 

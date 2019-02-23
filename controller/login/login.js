@@ -17,9 +17,8 @@ await pg.func('public.ft_view_get_usuario',[body.email,body.password]).catch(err
 
 
 if (usuario && usuario !='') {
-  console.log(usuario[0].nivel);
   let token = jwt.sign({
-    usuario:usuario[0].correo,
+    id:usuario[0].id_usuario,
     nivel:usuario[0].nivel
   },process.env.SEED,{ expiresIn:process.env.CADUCIDAD_TOKEN});
 
