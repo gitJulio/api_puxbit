@@ -5,7 +5,7 @@ var alumnos = require('../controller/alumnos/alumnos-controller')
 
 
 /* GET alumnos page. */
-router.get('/getAlumnos', alumnos.getAlumnos)
+router.get('/getAlumnos',alumnos.getAlumnos)
 
 
 module.exports = router

@@ -2,6 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const app = express()
 const pg = require('./config/ps_conection')
+const { verificaToken} = require('./middlewares/autenticacion')
+
 require('./config/config')
 //***************cors*****************
 var op = {
@@ -24,7 +26,7 @@ var loginRouter=require('./routes/login-routes');
 
 
 //**************Ruta principal de archivo***************
-app.use('/api/alumnos', cors(op), alumnosRouter);
+app.use('/api/alumnos', cors(op), verificaToken, alumnosRouter);
 app.use('/api/padres', cors(op), padresRouter);
 app.use('/api/profesores', cors(op), profesoresRouter);
 app.use('/api/login', cors(op), loginRouter)
