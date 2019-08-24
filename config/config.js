@@ -17,11 +17,11 @@ process.env.SEED=process.env.SEED || 'es-te-es-el-seed-desarrollo';
 
 const config = {
   db: {
-    host: '35.239.128.238',
+    host: 'dbtiendyn.postgres.database.azure.com',
     port: "5432",
     database: 'puxbit',
-    user: 'puxbit',
-    password: 'N1lointentes2019'
+    user: 'jbueso@dbtiendyn',
+    password: 'Axalon2019..'
   },
   data_token:{
     caducidad_token:60 * 60 * 24 * 30,
